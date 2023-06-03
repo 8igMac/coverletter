@@ -5,8 +5,8 @@
 ```
 go get .
 ```
-- Prepare a cover leter template. (Placeholders are: `position`, `team`, `company`.)
-- Put the template in a file and put it in the directory (see [template.example](./template.example)).
+- Prepare a cover leter template. (Placeholders are: `position`, `team`, `company`, see [template.example](./template.example))
+- Put the template in a file and rename it as `template`. Put it in the project directory.
 - Run the code.
 ```
 go run main.go

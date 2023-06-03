@@ -17,9 +17,9 @@ func combine(template string, company string, position string, team string) stri
 	return template
 }
 
-func get_template(template_filename string) string {
+func get_template() string {
 	// Read template from file.
-	file, err := os.Open(template_filename)
+	file, err := os.Open("template")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -64,18 +64,10 @@ func main() {
 	scanner.Scan()
 	company := scanner.Text()
 
-	fmt.Print("Enter the template file name: ")
-	scanner.Scan()
-	template_filename := scanner.Text()
-
-	template := get_template(template_filename)
+	template := get_template()
 	content := combine(template, company, position, team)
 
-	fmt.Print("Enter the output file name: ")
-	scanner.Scan()
-	filename := scanner.Text()
-
-	err := output_pdf(content, filename)
+	err := output_pdf(content, "output.pdf")
 	if err != nil {
 		log.Fatal(err)
 	}
