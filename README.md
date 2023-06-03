@@ -1,4 +1,5 @@
 # Cover Letter Generator
+Generate cover letter based on template and placeholders.
 
 ## Usage
 - Download dependency.
